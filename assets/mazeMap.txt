@@ -1,0 +1,30 @@
+wwwwwwwwwwwwwwwww
+woiiiiiiiiiiiiiow
+wiwwwwwwiwwwwwwiw
+wiwiiiiiiiiiiiwiw
+wiwfwiwwwwwiwfwiw
+woiiwiiiwiiiwiiow
+wwwwwiwiwiwiwwwww
+woiiiiwiwiwiiiiow
+wiwwwwwiiiwwwwwiw
+wiiiiiiiiiiiiiiiw
+wiiwwwwwfwwwwwiiw
+woiiiiwfffwiiiiow
+wwiwwiwfffwiwwiww
+wwiwwiwwwwwiwwiww
+wiiiiiiiiiiiiiiiw
+wiwwwwwiiiwwwwwiw
+woiiiiwiwiwiiiiow
+wwwwwiwiwiwiwwwww
+woiiwiiiwiiiwiiow
+wiwfwiwwwwwiwfwiw
+wiwiiiiifiiiiiwiw
+wiwwwwwwiwwwwwwiw
+woiiiiiiiiiiiiiow
+wwwwwwwwwwwwwwwww
+
+
+f floor
+w wall
+i pill
+o point
