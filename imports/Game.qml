@@ -59,6 +59,21 @@ Rectangle {
     }
 
     Connections {
+        function onGameStatusChanged(gameStatus) {
+            switch (gameStatus) {
+            case GameController.PLAYING:
+                {
+                    popPause.close();
+                    break;
+                }
+            case GameController.PAUSE:
+                {
+                    popPause.open();
+                    break;
+                }
+            }
+        }
+
         function onPillEaten(x, y, col, row) {
             rectGameArea.eatPill(x, y, col, row);
         }
@@ -127,6 +142,25 @@ Rectangle {
 
         anchors {
             left: rectGameArea.left
+            top: parent.top
+            topMargin: 15
+        }
+
+        font {
+            family: "bradley hand itc"
+            pixelSize: 18
+            weight: Font.Bold
+        }
+    }
+
+    Text {
+        id: txtPauseNotice
+
+        color: "#FFFFFF"
+        text: qsTr("Press ESC to pause")
+
+        anchors {
+            right: rectGameArea.right
             top: parent.top
             topMargin: 15
         }
@@ -309,6 +343,14 @@ Rectangle {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
             topMargin: 40
+        }
+
+        PauseOverlay {
+            id: popPause
+
+            anchors.centerIn: parent
+            height: 480
+            width: 340
         }
     }
 }

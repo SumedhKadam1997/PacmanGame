@@ -6,7 +6,17 @@ project(
     LANGUAGES C CXX
 )
 
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
+set(CMAKE_AUTOMOC TRUE)
+set(CMAKE_AUTORCC TRUE)
+set(CMAKE_AUTOUIC TRUE)
+
+set(MAIN_OUT_DIR "${CMAKE_BINARY_DIR}/out")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${MAIN_OUT_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${MAIN_OUT_DIR}/lib")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${MAIN_OUT_DIR}/lib")
 
 find_package(
     Qt6 6.4
@@ -18,7 +28,13 @@ find_package(
 
 qt_standard_project_setup()
 
-qt_add_executable(${PROJECT_NAME})
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/assets/appIcon.rc")
+
+qt_add_executable(
+    ${PROJECT_NAME}
+    WIN32
+    ${app_icon_resource_windows}
+)
 
 set(
     ${PROJECT_NAME}_Headers
@@ -57,6 +73,7 @@ qt_target_qml_sources(
     imports/Pill.qml
     imports/Point.qml
     imports/Wall.qml
+    imports/PauseOverlay.qml
 )
 
 qt_add_resources(

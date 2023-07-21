@@ -117,7 +117,15 @@ Window {
     Loader {
         id: gameLoader
 
+        Keys.enabled: true
         anchors.fill: parent
+        focus: true
         sourceComponent: blankComponent
+
+        Keys.onPressed: event => {
+            if (event.key === 16777220) {
+                gameLoader.sourceComponent = gameComponent;
+            }
+        }
     }
 }

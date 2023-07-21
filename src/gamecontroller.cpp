@@ -137,6 +137,8 @@ void GameController::pause() {
 }
 
 void GameController::restart() {
+    pacmanTimer->start(200);
+    setGameStatus(GameController::PLAYING);
 }
 
 void GameController::pacmanHandler() {
@@ -343,5 +345,5 @@ void GameController::setGameStatus(GameStatus newGameStatus) {
     if (m_gameStatus == newGameStatus)
         return;
     m_gameStatus = newGameStatus;
-    emit gameStatusChanged();
+    emit gameStatusChanged(m_gameStatus);
 }

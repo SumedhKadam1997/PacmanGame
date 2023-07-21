@@ -68,7 +68,7 @@ signals:
     void scoreChanged();
     void gameObjectsChanged();
     void pillEaten(int x, int y, int row, int col);
-    void gameStatusChanged();
+    void gameStatusChanged(GameStatus gameStatus);
 
 private:
     QList<QList<GameObject *>> m_gameMazeObjects;
